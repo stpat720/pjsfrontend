@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --video-player-background: #1a1a1a;
+  --video-player-controls: rgba(255, 255, 255, 0.8);
+  --video-player-border-radius: 10px;
+}
+
+.video-container {
+  border-radius: var(--video-player-border-radius);
+
+}
+
+
+video {
+  background: var(--video-player-background);
+  border-radius: inherit;
+}
+
+.video-controls {
+  color: var(--video-player-controls);
+}
+
+button {
+  z-index: 50 !important;
+  position: relative;
+}
+
+/* Change Mute Button Opacity When Not Hovered */
+.group ::part(mute-button) {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Make It Visible on Hover */
+.group:hover ::part(mute-button) {
+  opacity: 1;
+}
