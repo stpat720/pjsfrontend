@@ -1,15 +1,14 @@
 "use client";
 
-import { useState, useRef, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Video from "next-video";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Swiper default styles
 import "swiper/css/navigation"; // If using navigation buttons
 import "swiper/css/pagination"; // If using pagination
-import { Navigation, Pagination } from "swiper/modules";
+import { Navigation } from "swiper/modules";
 import MediaThemeInstaplay from 'player.style/instaplay/react';
 import '../app/globals.css'; // Import global styles
-import LazyVideo from  "./LazyVideo";
 
 
 const CATEGORY_OPTIONS = ["photography", "motion", "design", "3D_art"];
