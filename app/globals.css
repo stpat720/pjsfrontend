@@ -17,7 +17,11 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+:root {
+  font-family: var(--font-inter), sans-serif;
 }
 
 :root {
@@ -31,6 +35,14 @@ body {
 
 }
 
+.auto-hide-controls:hover {
+  --media-time-range-display: inline-block !important;
+  --media-control-display: inline-flex !important;
+}
+
+/* .auto-hide-controls:hover media-time-range {
+  --media-time-range-display: inline-block !important
+} */
 
 video {
   background: var(--video-player-background);
